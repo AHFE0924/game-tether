@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dh4kmrw3x3yes"]
+
+[ext_resource type="Script" uid="uid://kf7qtv1gvtdg" path="res://hazard.gd" id="1_0qld2"]
+[ext_resource type="Texture2D" uid="uid://jrsnl684lupt" path="res://Untitled_2-removebg-preview.png" id="2_scxj1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw71r"]
+size = Vector2(32, 32)
+
+[node name="Hazard" type="Area2D" unique_id=667871681]
+script = ExtResource("1_0qld2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1624795195]
+shape = SubResource("RectangleShape2D_sw71r")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1573747773]
+visible = false
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(0.101960786, 1, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=267118967]
+position = Vector2(-0.9999981, -9.999996)
+scale = Vector2(1.33125, 1.2986112)
+texture = ExtResource("2_scxj1")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

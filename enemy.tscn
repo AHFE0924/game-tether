@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cr4d7bufi1cv6"]
+
+[ext_resource type="Script" uid="uid://y2n2a7ds068w" path="res://enemy.gd" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://365jxqixc8un" path="res://slime-removebg-preview (1).png" id="2_4gyqm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw71r"]
+size = Vector2(24, 24)
+
+[node name="Enemy" type="Area2D" unique_id=61907092 groups=["enemy", "swappable"]]
+script = ExtResource("1_7k104")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=300826356]
+modulate = Color(1, 0, 0, 1)
+shape = SubResource("RectangleShape2D_sw71r")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=190594024]
+
+[node name="Timer" type="Timer" parent="." unique_id=1025492226]
+wait_time = 0.6
+autostart = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1506413994]
+visible = false
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(1, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=721887340]
+position = Vector2(41.5, -52.5)
+scale = Vector2(1.51875, 1.7291666)
+texture = ExtResource("2_4gyqm")

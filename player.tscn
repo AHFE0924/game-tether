@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://damw0t8e8kdr1"]
+
+[ext_resource type="Script" uid="uid://d368t11urrsl5" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://bdrg640wttk3d" path="res://anchor.tscn" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://b15qdg05r1kyl" path="res://cold-removebg-preview.png" id="3_i3pqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw71r"]
+size = Vector2(24, 24)
+
+[node name="Player" type="Area2D" unique_id=875779394 groups=["player"]]
+script = ExtResource("1_4flbx")
+anchor_scene = ExtResource("2_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1500685361]
+shape = SubResource("RectangleShape2D_sw71r")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=785992224]
+visible = false
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=927826237]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=809447061]
+position = Vector2(18, -19)
+scale = Vector2(1.225, 1.2638888)
+texture = ExtResource("3_i3pqv")

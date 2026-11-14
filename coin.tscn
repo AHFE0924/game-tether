@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bs566b45vw0bo"]
+
+[ext_resource type="Script" uid="uid://6lqmddkm0rit" path="res://coin.gd" id="1_d5gmh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw71r"]
+size = Vector2(16, 16)
+
+[node name="Coin" type="Area2D" unique_id=1339808180 groups=["coin"]]
+script = ExtResource("1_d5gmh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1595249325]
+shape = SubResource("RectangleShape2D_sw71r")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=822248297]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(1, 1, 0, 1)
